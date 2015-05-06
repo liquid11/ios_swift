@@ -23,10 +23,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
    }
     
+
+
     @IBAction func btnLogin(sender: UIButton) {
         
-    self.txtId.resignFirstResponder()
+    txtId.resignFirstResponder()
+    txtPass.resignFirstResponder()
+        
         
     }
+    
+    
+    
 }
 
