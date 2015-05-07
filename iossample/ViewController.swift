@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController  {
 
     @IBOutlet var txtId: UITextField!
     @IBOutlet var txtPass: UITextField!
@@ -22,14 +22,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
    }
-    
-
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+view.endEditing(true)
+           }
 
     @IBAction func btnLogin(sender: UIButton) {
         
     txtId.resignFirstResponder()
     txtPass.resignFirstResponder()
-        
         
     }
     
