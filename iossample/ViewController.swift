@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController  {
+class ViewController: UIViewController,UITextFieldDelegate  {
 
     @IBOutlet var txtId: UITextField!
     @IBOutlet var txtPass: UITextField!
@@ -22,7 +22,14 @@ class ViewController: UIViewController  {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    return false
+    }
+    
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        
 view.endEditing(true)
            }
 
